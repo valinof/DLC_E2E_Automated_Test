@@ -1,0 +1,84 @@
+{
+  "locations": [
+    {
+      "name": "Carson City",
+      "addresses": [
+        "3790 US Hwy 395, Carson City, NV 89705",
+        "3325 Retail Drive Suite 105, Carson City, NV 89706"
+      ]
+    },
+    {
+      "name": "Fernley",
+      "addresses": ["1380 US Hwy 95A N Suite 6, Fernley, NV 89408"]
+    },
+    {
+      "name": "Henderson",
+      "addresses": [
+        "1351 W Sunset Rd Ste 110, Henderson, NV 89014",
+        "642 E Horizon Dr Suite 100, Henderson, NV 89015",
+        "2654 W Horizon Ridge Pkwy, Henderson, NV 89052"
+      ]
+    },
+    {
+      "name": "Las Vegas",
+      "addresses": [
+        "6620 W Flamingo Rd , Las Vegas, NV 89103",
+        "2288 S Nellis Blvd Suite 1B, Las Vegas, NV 89104",
+        "651 N Rainbow Blvd Suite 130, Las Vegas, NV 89107",
+        "4700 Meadows Ln, Las Vegas, NV 89107",
+        "7345 S Durango Dr, Las Vegas, NV 89113",
+        "9101 W Sahara Ave Suite 100, Las Vegas, NV 89117",
+        "4902 S Eastern Ave Las Vegas, Las Vegas, NV 89119",
+        "1386 E Flamingo Road, Las Vegas, NV 89119",
+        "6420 S Pecos Rd Suite A2, Las Vegas, NV 89120",
+        "4310 E Tropicana Ave, Las Vegas, NV 89121",
+        "9340 S Eastern Ave 100, Las Vegas, NV 89123",
+        "8334 S. Maryland Parkway Suite 103, Las Vegas, NV 89123",
+        "7421 W Lake Mead Ste 4, Las Vegas, NV 89128",
+        "3962 Blue Diamond Rd Suite 103, Las Vegas, NV 89139",
+        "7875 S Rainbow Blvd Suite 101, Las Vegas, NV 89139",
+        "6122 W Sahara Ave, Las Vegas, NV 89146",
+        "8665 W Flamingo Rd Suite 101, Las Vegas, NV 89147",
+        "9420 W Russell Rd Suite 103, Las Vegas, NV 89148",
+        "6401 N Durango Dr Suite 110, Las Vegas, NV 89149",
+        "6685 E Lake Mead Blvd Ste 105, Las Vegas, NV 89156"
+      ]
+    },
+    {
+      "name": "Laughlin",
+      "addresses": ["3080 S Needles Hwy Suite 2700, Laughlin, NV 89029"]
+    },
+    {
+      "name": "North Las Vegas",
+      "addresses": [
+        "2711 N Las Vegas Blvd, North Las Vegas, NV 89030",
+        "2805 W Centennial Pkwy, North Las Vegas, NV 89031",
+        "4669 W Ann Rd, North Las Vegas, NV 89031",
+        "2445 W Craig Rd, North Las Vegas, NV 89032",
+        "2590 E Craig Rd, North Las Vegas, NV 89081",
+        "6648 N. 5th St., North Las Vegas, NV 89084"
+      ]
+    },
+    {
+      "name": "Pahrump",
+      "addresses": ["321 S Frontage Rd, Pahrump, NV 89048"]
+    },
+    {
+      "name": "Reno",
+      "addresses": [
+        "490 E Plumb Ln, Reno, NV 89502",
+        "595 Keystone Ave, Reno, NV 89503",
+        "280 Vista Knoll Pkwy, Reno, NV 89506",
+        "748 S Meadows Pkwy, Reno, NV 89521"
+      ]
+    },
+    {
+      "name": "Sparks",
+      "addresses": ["889 Sparks Blvd, Sparks, NV 89434"]
+    },
+    {
+      "name": "Sun Valley",
+      "addresses": ["5105 Sun Valley Blvd Bldg 1, Sun Valley, NV 89433"]
+    }
+  ]
+}

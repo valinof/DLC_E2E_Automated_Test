@@ -1,0 +1,58 @@
+{
+  "locations": [
+    {
+      "name": "Bountiful",
+      "addresses": [
+        "320 W 500 S, Bountiful, UT 84010"
+      ]
+    },
+    {
+      "name": "Draper",
+      "addresses": [
+        "196 W 12300 S, Draper, UT 84020"
+      ]
+    },
+    {
+      "name": "Murray",
+      "addresses": [
+        "6034 S 900 E, Murray, UT 84121"
+      ]
+    },
+    {
+      "name": "Provo",
+      "addresses": [
+        "1326 S University Ave, Provo, UT 84601"
+      ]
+    },
+    {
+      "name": "Roy",
+      "addresses": [
+        "5667 S 1900 W, Roy, UT 84067"
+      ]
+    },
+    {
+      "name": "Salt Lake City",
+      "addresses": [
+        "130 W 2100 S, Salt Lake City, UT 84115"
+      ]
+    },
+    {
+      "name": "Syracuse",
+      "addresses": [
+        "1588 S 2000 W, Syracuse, UT 84075"
+      ]
+    },
+    {
+      "name": "West Jordan",
+      "addresses": [
+        "1789 W 7800 S, West Jordan, UT 84088"
+      ]
+    },
+    {
+      "name": "West Valley City",
+      "addresses": [
+        "2210 W 3500 S, West Valley City, UT 84119"
+      ]
+    }
+  ]
+}

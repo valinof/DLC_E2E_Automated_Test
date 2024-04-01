@@ -1,0 +1,37 @@
+{
+  "locations": [
+    {
+      "name": "Boise",
+      "addresses": [
+        "10484 W Emerald St, Boise, ID 83704",
+        "5253 W Overland Rd, Boise, ID 83705",
+        "1624 S. Broadway, Boise, ID 83706",
+        "13601 W. McMillan Road, Suite 108, Boise, ID 83713"
+      ]
+    },
+    {
+      "name": "Boise",
+      "addresses": ["5253 W Overland Rd, Boise, ID 83705"]
+    },
+    {
+      "name": "Boise",
+      "addresses": ["1624 S. Broadway, Boise, ID 83706"]
+    },
+    {
+      "name": "Boise",
+      "addresses": ["13601 W. McMillan Road, Suite 108, Boise, ID 83713"]
+    },
+    {
+      "name": "Caldwell",
+      "addresses": ["4418 Cleveland Blvd, Caldwell, ID 83605"]
+    },
+    {
+      "name": "Meridian",
+      "addresses": ["210 E. Corporate Dr., Meridian, ID 83642"]
+    },
+    {
+      "name": "Nampa",
+      "addresses": ["1401 12th Ave Rd., Nampa, ID 83605"]
+    }
+  ]
+}
