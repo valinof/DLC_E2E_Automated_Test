@@ -1,6 +1,18 @@
+import { faker } from "@faker-js/faker";
+
 class TestUtil {
   constructor() {
     this.emailStorageKey = "last_generated_email.txt";
+  }
+  generateUserId(testScenario) {
+    const randomNumber = faker.string.numeric(15);
+    let email = "Test" + randomNumber + "Tester@example.com";
+    cy.writeFile(
+      "emails_used_in_testing.txt",
+      email + " " + "Test Scenario: " + testScenario + "\n",
+      { flag: "a+" }
+    );
+    return email;
   }
 
   checkUrl(targetUrl) {
@@ -42,6 +54,11 @@ class TestUtil {
 
     // Ensure cy.get() is executed within a test or beforeEach()
     cy.get(`ul > :nth-child(${n}) > .button`).should("contain", buttonLabel);
+  }
+
+  generateRandomFirstName() {
+    const randomFirstName = faker.person.firstName();
+    return randomFirstName;
   }
 }
 
