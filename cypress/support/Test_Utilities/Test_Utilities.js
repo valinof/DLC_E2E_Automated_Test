@@ -1,9 +1,9 @@
 import { faker } from "@faker-js/faker";
 
 class TestUtil {
-  constructor() {
-    this.emailStorageKey = "last_generated_email.txt";
-  }
+  // constructor() {
+  //   this.emailStorageKey = "last_generated_email.txt";
+  // }
   generateUserId(testScenario) {
     const randomNumber = faker.string.numeric(15);
     let email = "Test" + randomNumber + "Tester@example.com";
@@ -62,4 +62,4 @@ class TestUtil {
   }
 }
 
-module.exports = TestUtil;
+export { TestUtil };

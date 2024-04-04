@@ -22,4 +22,4 @@ class CustomerInfoEntryPage {
   }
 }
 
-module.exports = CustomerInfoEntryPage;
+export { CustomerInfoEntryPage };

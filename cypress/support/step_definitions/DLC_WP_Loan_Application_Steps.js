@@ -2,8 +2,8 @@ import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 import HomePage from "../PageObject/DLC_WP_Home_Page";
 import ApplicationPage from "../PageObject/DLC_WP_Online_Loan_Application_Page";
-import CustomerInfoEntryPage from "../PageObject/DLC_WP_Customer_Information_Page";
-import TestUtil from "../Test_Utilities/Test_Utilities";
+import { CustomerInfoEntryPage } from "../PageObject/DLC_WP_Customer_Information_Page";
+import { TestUtil } from "../Test_Utilities/Test_Utilities";
 
 const homePageAction = new HomePage();
 const applicationPageAction = new ApplicationPage();
@@ -45,6 +45,5 @@ When("I am presented with the We'll need a little info page", () => {
 
 When("I type test firstname", () => {
   const testFirstName = testUtil.generateRandomFirstName();
-
   customerInfoEntryPageAction.enterTestFirstName(testFirstName);
 });
