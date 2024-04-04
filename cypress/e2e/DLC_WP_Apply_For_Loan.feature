@@ -8,12 +8,12 @@ Feature: Loan Application on WP version of frontend
     #create an assertion on page title
     When the Online Loan Application page is displayed
     And I confirm loan amount value as "default"
-    And I enter an email address to setup my account
-    And I create a password 'Tester@123Tester'
+    And I enter an email address to setup my account to test "Apply Base Path"
+    And I create a password 'Tester@123Teste'
     And I click the Create an account button
-#create an assertion on page title
-# And I am presented with the We'll need a little info page
-# And I type my firstname 'Testauto'
+    #create an assertion on page title
+    And I am presented with the We'll need a little info page
+    And I type test firstname
 # And I type my lastname 'Testmation'
 # And I type my date of birth "<dateOfBirthvalue>"
 #ssn needs to be unique in Infinity - needs a util
@@ -53,9 +53,4 @@ Feature: Loan Application on WP version of frontend
 # And I click the Fast Approval button
 ###as of 3/5/2024 it doesn't seem to connect to the bank yet to complete the process.
 ###I'll add the new steps to this workflow once that component is integrated.
-
-
-
-
-
 

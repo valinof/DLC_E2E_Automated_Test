@@ -1,5 +1,3 @@
-//const { contains } = require("cypress/types/jquery");
-
 class ApplicationPage {
   elements = {
     applicationPageTitle: () => cy.get(".section-title"),
@@ -9,8 +7,7 @@ class ApplicationPage {
     firstTimePasswordField: () =>
       cy.get("div:nth-of-type(12)  input[name='input_6']"),
     passwordConfirmationField: () => cy.get("input[name='input_7']"),
-    createAccountButton: () =>
-      cy.get(".button.gform-theme-button.gform_next_button"),
+    createAccountButton: () => cy.get("#gform_next_button_4_9"),
   };
   checkPageTitle() {
     this.elements
@@ -23,6 +20,10 @@ class ApplicationPage {
       this.elements.loanAmount().should("contain", "2,000");
       return;
     } else this.elements.loanAmount().should("contain", loanAmountValue);
+  }
+
+  checkDollarValueIncrements() {
+    lsdfasjlsjflasf;
   }
 
   setLoanAmount(loanAmountValue) {
@@ -45,6 +46,7 @@ class ApplicationPage {
   }
 
   clickCreateAccountButton() {
+    this.elements.createAccountButton().scrollIntoView();
     this.elements.createAccountButton().click();
   }
 }
