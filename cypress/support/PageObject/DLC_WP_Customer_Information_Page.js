@@ -1,4 +1,4 @@
-import TestUtil from "../Test_Utilities/Test_Utilities";
+import { TestUtil } from "../Test_Utilities/Test_Utilities";
 
 const testUtil = new TestUtil();
 
@@ -17,8 +17,24 @@ class CustomerInfoEntryPage {
       .should("contain", "we’ll need a little info");
   }
 
-  enterTestFirstName(testFirstName) {
+  enterTestFirstName() {
+    const testFirstName = testUtil.generateRandomFirstName();
     this.elements.custInfoFirstNameField().type("Test" + testFirstName);
+  }
+
+  enterTestLastName() {
+    const testLastName = testUtil.generateRandomLastName();
+    this.elements.custInfoLastNameField().type("Test" + testLastName);
+  }
+
+  enterTestDob() {
+    const dateOfBirth = testUtil.generateRandomDob();
+    this.elements.dobField().type(dateOfBirth);
+  }
+
+  enterTestSsn() {
+    const testSsn = testUtil.generateRandomSSN();
+    this.elements.ssnField().type(testSsn);
   }
 }
 

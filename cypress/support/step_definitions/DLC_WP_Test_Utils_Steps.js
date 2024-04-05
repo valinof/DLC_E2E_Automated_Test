@@ -1,7 +1,7 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 import DlcLocationPage from "../PageObject/DLC_WP_DLC_Locations_Page";
-import TestUtil from "../Test_Utilities/Test_Utilities";
+import { TestUtil } from "../Test_Utilities/Test_Utilities";
 
 //Page Object Instances
 const dlcLocationPageActions = new DlcLocationPage();
