@@ -8,8 +8,8 @@ class TestUtil {
     const randomNumber = faker.string.numeric(15);
     let email = "Test" + randomNumber + "Tester@example.com";
     cy.writeFile(
-      "emails_used_in_testing.txt",
-      email + " " + "Test Scenario: " + testScenario + "\n",
+      "test_data_used_during_execution.txt",
+      "\n" + email + " " + "Scenario: " + testScenario,
       { flag: "a+" }
     );
     return email;
@@ -59,6 +59,43 @@ class TestUtil {
   generateRandomFirstName() {
     const randomFirstName = faker.person.firstName();
     return randomFirstName;
+  }
+
+  generateRandomLastName() {
+    const randomLastName = faker.person.lastName();
+    return randomLastName;
+  }
+
+  generateRandomDob() {
+    const minDate = new Date("1945-01-01"); // Minimum date for birthdate
+    const maxDate = new Date("2000-12-30"); // Current date (maximum date for birthdate)
+
+    // Generate a random date of birth between minDate and maxDate
+    const randomDob = faker.date.between(minDate, maxDate);
+
+    // Format the date as ddmmyyyy
+    const day = String(randomDob.getDate()).padStart(2, "0");
+    const month = String(randomDob.getMonth() + 1).padStart(2, "0");
+    const year = randomDob.getFullYear();
+
+    // Return the formatted date of birth
+    return day + month + year;
+  }
+
+  generateRandomSSN() {
+    // Generate random numbers for the last six digits
+    const lastSixDigits = faker.number
+      .int({ min: 0, max: 999999 })
+      .toString()
+      .padStart(6, "0");
+
+    // Concatenate '888' with the last six digits to form the SSN
+    const ssn = `888-${lastSixDigits}`;
+    cy.writeFile("test_data_used_during_execution.txt", " SSN: " + ssn + "\n", {
+      flag: "a+",
+    });
+
+    return ssn;
   }
 }
 

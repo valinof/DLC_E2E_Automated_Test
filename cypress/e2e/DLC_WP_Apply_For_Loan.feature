@@ -5,19 +5,16 @@ Feature: Loan Application on WP version of frontend
   Scenario: Apply Base Path
     Given I navigate to the "https://dlccorp.wpenginepowered.com/" url
     And I click the Click to Apply Now button
-    #create an assertion on page title
     When the Online Loan Application page is displayed
     And I confirm loan amount value as "default"
     And I enter an email address to setup my account to test "Apply Base Path"
-    And I create a password 'Tester@123Teste'
+    And I create a password 'Test123Test'
     And I click the Create an account button
-    #create an assertion on page title
     And I am presented with the We'll need a little info page
     And I type test firstname
-# And I type my lastname 'Testmation'
-# And I type my date of birth "<dateOfBirthvalue>"
-#ssn needs to be unique in Infinity - needs a util
-# And I type my SSN "<ssnValue>"
+    And I type test lastname
+    And I type test date of birth
+    And I type test SSN
 #cellphone number needs to be unique in Infinity - needs a util
 # And I type my cellphone number "<cellphoneNumberValue>"
 # And I type my Address "21 Jump Street"

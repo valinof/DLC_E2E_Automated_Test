@@ -44,6 +44,17 @@ When("I am presented with the We'll need a little info page", () => {
 });
 
 When("I type test firstname", () => {
-  const testFirstName = testUtil.generateRandomFirstName();
-  customerInfoEntryPageAction.enterTestFirstName(testFirstName);
+  customerInfoEntryPageAction.enterTestFirstName();
+});
+
+When("I type test lastname", () => {
+  customerInfoEntryPageAction.enterTestLastName();
+});
+
+When("I type test date of birth", () => {
+  customerInfoEntryPageAction.enterTestDob();
+});
+
+When("I type test SSN", () => {
+  customerInfoEntryPageAction.enterTestSsn();
 });
