@@ -20,11 +20,15 @@ class HomePage {
       cy.get(".footer-additional-links-menu > li:nth-of-type(5) > a"),
     privacyRightsLink: () =>
       cy.get(".footer-additional-links-menu > li:nth-of-type(6) > a"),
+    privacyRightsCaResLink: () =>
+      cy.xpath(
+        "//a[normalize-space()='Privacy Notice for California Residents']"
+      ),
     doNotSellMyPiLink: () => cy.get("li:nth-of-type(8) > a"),
     dlcLocationLink: () => cy.get("li:nth-of-type(9) > a"),
     blogLink: () => cy.get("li:nth-of-type(10) > a"),
     pressLink: () => cy.get("li:nth-of-type(11) > a"),
-    workAtDlcLink: () => cy.get("li:nth-of-type(12) > a"),
+    workAtDlcLink: () => cy.get("li:nth-of-type(12)"),
     contacUsLink: () => cy.get("li:nth-of-type(13) > a"),
     fraudAlertLink: () => cy.get("li:nth-of-type(14) > a"),
     stateLicenseLink: () => cy.get("li:nth-of-type(15) > a"),
@@ -66,6 +70,45 @@ class HomePage {
       console.log(
         "Invalid state. Check data table. Value is: " + locationValue
       );
+  }
+
+  confirmAllAdditionalLinksNavigation(linkName) {
+    //Additional Disclaimer link
+    if (linkName === "Additional Disclaimer") {
+      this.elements.additionalDisclaimerLink().click();
+    } else if (linkName === "Compliance Policy") {
+      this.elements.compliancePolicyLink().click();
+    } else if (linkName === "Terms & Conditions") {
+      this.elements.termsAndConditionsLink().click();
+    } else if (linkName === "Mobile Terms & Condition") {
+      this.elements.mobileTermsAndConditionsLink().click();
+    } else if (linkName === "Privacy Policy") {
+      this.elements.privacyPolicyLink().click();
+    } else if (linkName === "Privacy Rights") {
+      this.elements.privacyRightsLink().click();
+    } else if (linkName === "Privacy Rights Califorinia Residents") {
+      this.elements.privacyRightsCaResLink().click();
+    } else if (linkName === "Do Not Sell My Personal Information") {
+      this.elements.doNotSellMyPiLink().click();
+    } else if (linkName === "DLC Locations") {
+      this.elements.dlcLocationLink().click();
+    } else if (linkName === "Blog") {
+      this.elements.blogLink().click();
+    } else if (linkName === "Press") {
+      this.elements.pressLink().click();
+    } else if (linkName === "Work At DLC") {
+      this.elements.workAtDlcLink().click();
+    } else if (linkName === "Contact Us") {
+      this.elements.contacUsLink().click();
+    } else if (linkName === "Fraud Alert") {
+      this.elements.fraudAlertLink().click();
+    } else if (linkName === "State Licenses") {
+      this.elements.stateLicenseLink().click();
+    } else {
+      console.log(
+        "The link name used " + linkName + " is not a valid link name."
+      );
+    }
   }
 }
 

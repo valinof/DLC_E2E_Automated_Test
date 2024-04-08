@@ -4,6 +4,15 @@ class TestUtil {
   // constructor() {
   //   this.emailStorageKey = "last_generated_email.txt";
   // }
+  elements = {
+    applicationPageTitle: () => cy.get(".section-title"),
+  };
+
+  checkPageTitle() {
+    this.elements
+      .applicationPageTitle()
+      .should("contain", "Online Loan Application");
+  }
   generateUserId(testScenario) {
     const randomNumber = faker.string.numeric(15);
     let email = "Test" + randomNumber + "Tester@example.com";
@@ -68,18 +77,18 @@ class TestUtil {
 
   generateRandomDob() {
     const minDate = new Date("1945-01-01"); // Minimum date for birthdate
-    const maxDate = new Date("2000-12-30"); // Current date (maximum date for birthdate)
+    const maxDate = new Date("2006-12-30"); // Current date (maximum date for birthdate)
 
     // Generate a random date of birth between minDate and maxDate
     const randomDob = faker.date.between(minDate, maxDate);
 
-    // Format the date as ddmmyyyy
-    const day = String(randomDob.getDate()).padStart(2, "0");
+    // Format the date as mm/dd/yyyy
     const month = String(randomDob.getMonth() + 1).padStart(2, "0");
+    const day = String(randomDob.getDate()).padStart(2, "0");
     const year = randomDob.getFullYear();
 
     // Return the formatted date of birth
-    return day + month + year;
+    return `${month}/${day}/${year}`;
   }
 
   generateRandomSSN() {
@@ -96,6 +105,19 @@ class TestUtil {
     });
 
     return ssn;
+  }
+  generateRandomCellphoneNumber() {
+    // Generate random numbers for the last seven digits
+    const lastSevenDigits = faker.number
+      .int({ min: 1000000, max: 9999999 })
+      .toString();
+
+    // Format the cellphone number with the appropriate country code and area code
+    const countryCode = "+1"; // Assuming US country code
+    const areaCode = faker.number.int({ min: 200, max: 999 }).toString(); // Assuming random area code
+    const phoneNumber = `${areaCode}+${lastSevenDigits}`;
+
+    return phoneNumber;
   }
 }
 
