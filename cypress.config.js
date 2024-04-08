@@ -16,7 +16,7 @@ async function setupNodeEvents(on, config) {
 }
 
 module.exports = defineConfig({
-  projectId: "ejcy3m",
+  projectId: "9atjb4",
   e2e: {
     baseUrl: "https://duckduckgo.com",
     specPattern: "**/*.feature",

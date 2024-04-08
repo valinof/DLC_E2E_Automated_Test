@@ -1,10 +1,12 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 import DlcLocationPage from "../PageObject/DLC_WP_DLC_Locations_Page";
+import HomePage from "../PageObject/DLC_WP_Home_Page";
 import { TestUtil } from "../Test_Utilities/Test_Utilities";
 
 //Page Object Instances
 const dlcLocationPageActions = new DlcLocationPage();
+const homePageAction = new HomePage();
 
 //Test Utils Instances
 const testUtilitiesActions = new TestUtil();
@@ -32,3 +34,10 @@ When(
 When("I confirm {string} button is labled {string}", (state, buttonLable) => {
   testUtilitiesActions.verifyButtonLables(state, buttonLable);
 });
+
+When(
+  "I confirm correct navigation of all {string} listed under Additional Links",
+  (linkName, urlToConfirm) => {
+    homePageAction.confirmAllAdditionalLinksNavigation(linkName);
+  }
+);

@@ -4,6 +4,15 @@ class TestUtil {
   // constructor() {
   //   this.emailStorageKey = "last_generated_email.txt";
   // }
+  elements = {
+    applicationPageTitle: () => cy.get(".section-title"),
+  };
+
+  checkPageTitle() {
+    this.elements
+      .applicationPageTitle()
+      .should("contain", "Online Loan Application");
+  }
   generateUserId(testScenario) {
     const randomNumber = faker.string.numeric(15);
     let email = "Test" + randomNumber + "Tester@example.com";
