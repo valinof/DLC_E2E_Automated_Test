@@ -102,6 +102,58 @@ When(
   }
 );
 
-When("I expand the {string} section", (sectionName) => {
-  customerInfoEntryPageAction.expandIncomeEmploymentSection;
+// When("I click on section 2", () => {
+//   customerInfoEntryPageAction.
+// });
+
+When("I complete Section 1 of the loan application", () => {
+  customerInfoEntryPageAction.completeLoanApplySection1();
+});
+
+When("I type my Monthly Income {string}", (monthyIncomeValue) => {
+  customerInfoEntryPageAction.enterMonthlyIncome(monthyIncomeValue);
+});
+
+When("I select my Payroll Type {string}", (paymentTypeValue) => {
+  customerInfoEntryPageAction.selectPaymentType(paymentTypeValue);
+});
+
+When("I select my Income Type {string}", (incomeTypeValue) => {
+  customerInfoEntryPageAction.selectIcomeType(incomeTypeValue);
+});
+
+When("I type {string} as my occupation", (occupationValue) => {
+  customerInfoEntryPageAction.enterOccupation(occupationValue);
+});
+
+When("I type {string} as my employer", (employerNameValue) => {
+  customerInfoEntryPageAction.enterEmployerName(employerNameValue);
+});
+
+When("I type {string} as my hire date", (hireDateValue) => {
+  customerInfoEntryPageAction.enterHireDate(hireDateValue);
+});
+
+When("I type {string} as my employer's phone number", (empPhoneNumberValue) => {
+  customerInfoEntryPageAction.enterEmployerPhoneNumber(empPhoneNumberValue);
+});
+
+When("I type {string} as my employer's address", (employerAddressValue) => {
+  customerInfoEntryPageAction.enterEmployerAddress(employerAddressValue);
+});
+
+When("I type {string} as my employer's city", (employerCityValue) => {
+  customerInfoEntryPageAction.enterEmployerCity(employerCityValue);
+});
+
+When("I select employer {string}", (employerStateValue) => {
+  customerInfoEntryPageAction.selectEmployerState(employerStateValue);
+});
+
+When("I select my Pay Frequency {string}", (payFrequencyValue) => {
+  customerInfoEntryPageAction.selectPayFrequency(payFrequencyValue);
+});
+
+When("I type {string} as my estimated monthly bill", (estMonthlyBillsValue) => {
+  customerInfoEntryPageAction.enterEstMonthlyBills(estMonthlyBillsValue);
 });

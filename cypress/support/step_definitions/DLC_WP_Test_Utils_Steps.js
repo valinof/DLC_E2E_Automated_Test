@@ -11,6 +11,9 @@ const homePageAction = new HomePage();
 //Test Utils Instances
 const testUtilitiesActions = new TestUtil();
 
+Given("I am testing on a Macbook 16", () => {
+  cy.viewport("macbook-16");
+});
 Given("I navigate to the {string} url", (url) => {
   cy.visit(url);
 });

@@ -22,7 +22,43 @@ class CustomerInfoEntryPage {
     mailInZipCode: () => cy.get("#input_4_32"),
     noMilitaryServiceRb: () => cy.get("#choice_4_34_1"),
     yesMilitaryserviceRb: () => cy.get("#choice_4_34_0"),
-    incomeEmploymentSection: () => cy.get("#field_4_56"),
+    continueButton1: () =>
+      cy.get(
+        "form[class='loan-apply-info-step-one-form'] button[type='submit']"
+      ),
+
+    section2Form: () => cy.get("#field_4_56"),
+    payrollTypeDropdown: () => cy.get("#input_4_60"),
+
+    incomeTypeDropdown: () => cy.get("#input_4_61"),
+
+    paymentFrequencyDropdown: () => cy.get("#input_4_62"),
+
+    occupationField: () => cy.get("#input_4_98"),
+
+    employerNameField: () => cy.get("#input_4_99"),
+
+    hireDateField: () => cy.get("#input_4_100"),
+
+    employerPhoneField: () => cy.get("#input_4_101"),
+
+    employerAddressField: () => cy.get("#input_4_102"),
+
+    employerCityField: () => cy.get("#input_4_102"),
+
+    employerZipField: () => cy.get("#input_4_105"),
+
+    employerStateDropDown: () => cy.get("#input_4_104"),
+
+    payFrequencyDropDown: () => cy.get("#input_4_62"),
+
+    estimatedMonthlyBills: () => cy.get("#input_4_63"),
+
+    section3Form: () => cy.get("#field_4_57"),
+    continueButton2: () =>
+      cy.get(
+        "form[class='loan-apply-info-step-two-form'] button[type='submit']"
+      ),
   };
   checkCustomerInfoPageTitle() {
     this.elements
@@ -98,12 +134,53 @@ class CustomerInfoEntryPage {
     }
   }
 
-  expandLoanApplicationSection(sectionName) {
-    if (sectionName === "Income & Employment Info") {
-      this.elements.incomeEmploymentSection().click();
-    } else {
-      console.log("Invalid section. Check your test again.");
-    }
+  completeLoanApplySection1() {
+    this.elements.section2Form().click();
+  }
+
+  enterMonthlyIncome(montlyIncomeValue) {
+    this.elements.monthyIncomeField().type(montlyIncomeValue);
+  }
+  selectPaymentType(paymentTypeValue) {
+    this.elements.paymentTypeDropDown().select(paymentTypeValue);
+  }
+  selectIcomeType(incomeTypeValue) {
+    this.elements.incomeTypeDropDown().select(incomeTypeValue);
+  }
+
+  enterOccupation(occupationValue) {
+    this.elements.occupationField().type(occupationValue);
+  }
+
+  enterEmployerName(employerNameValue) {
+    this.elements.employerNameField().type(employerNameValue);
+  }
+
+  enterHireDate(hireDateValue) {
+    this.elements.hireDateField().type(hireDateValue);
+  }
+
+  enterEmployerPhoneNumber(empPhoneNumberValue) {
+    this.elements.employerPhoneField().type(empPhoneNumberValue);
+  }
+
+  enterEmployerAddress(employerAddressValue) {
+    this.elements.employerAddressField().type(employerAddressValue);
+  }
+  enterEmployerCity(employerCityValue) {
+    this.elements.employerCityField().type(employerCityValue);
+  }
+
+  selectPayFrequency(payFrequencyValue) {
+    this.elements.payFrequencyDropDown().select(payFrequencyValue);
+  }
+
+  selectEmployerState(employerStateValue) {
+    this.elements.employerStateDropDown().select(employerStateValue);
+  }
+
+  enterEstMonthlyBills(estMonthlyBillsValue) {
+    this.elements.estimatedMonthlyBills().type(estMonthlyBillsValue)
   }
 }
 

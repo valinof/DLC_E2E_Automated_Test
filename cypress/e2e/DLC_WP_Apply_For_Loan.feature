@@ -3,7 +3,8 @@ Feature: Loan Application on WP version of frontend
   These tests exercise various scnenarios of applying for a loan through the DLC Wordpress frontend
 
   Scenario Outline: Apply Base Path
-    Given I navigate to the "https://dlccorp.wpenginepowered.com/" url
+    Given I am testing on a Macbook 16
+    And I navigate to the "https://dlccorp.wpenginepowered.com/" url
     And I click the Click to Apply Now button
     When the Online Loan Application page is displayed
     And I confirm loan amount value as '<loanAmount>'
@@ -23,18 +24,20 @@ Feature: Loan Application on WP version of frontend
     And I check the Mailing address matches above checkbox
     And I confirm '<streetAddressValue>''<cityValue>''<stateValue>''<zipValue>'
     And I select the '<military>' radiobutton for military status
-    And I expand the "Income & Employment Info" section
-    # And I type my Monthly Income "3500"
-    # And I select my Payroll Type "Direct Deposit"
-    # And I select my Income Type "Employment"
-    # And I type "Tester" as my occupation
-    # And I type "Software Testing Inc" as my employer
-    # And I type "03/03/1999" as my hire date
-    # And I type "312-588-2300" as my employer's phone number
-    # And I type "221B Baker Street" as my employer's address
-    # And I type "Reno" as my employer's city
-    # And I select my Pay Frequency "Bi-weekly"
-    # And I type "1834" as my estimated monthly bills
+    And I complete Section 1 of the loan application
+    # And I click on Section 2
+    And I type my Monthly Income "3500"
+    And I select my Payroll Type "Direct Deposit"
+    And I select my Income Type "Employment"
+    And I type "Tester" as my occupation
+    And I type "Software Testing Inc" as my employer
+    And I type "03/03/1999" as my hire date
+    And I type "312-588-2300" as my employer's phone number
+    And I type "221B Baker Street" as my employer's address
+    And I type '<cityValue>' as my employer's city
+    And I select employer '<stateValue>'
+    And I select my Pay Frequency '<payFrequency>'
+    And I type "1834" as my estimated monthly bills
     # And I click on the Authorization & Signature section heading
     # And I select the Yes radiobutton for Reporting Authorization
     # And I select the Yes radiobutton to acklowledge lender's right of denial of service
@@ -51,5 +54,5 @@ Feature: Loan Application on WP version of frontend
     ###I'll add the new steps to this workflow once that component is integrated.
 
     Examples:
-      | testScenario    | loanAmount | streetAddressValue | cityValue | stateValue | zipValue | military |
-      | Apply_Base_Path | default    | 99 Test Street     | Reno      | NV         | 89501    | no       |
+      | testScenario    | loanAmount | streetAddressValue | cityValue | stateValue | zipValue | military | payFrequency |
+      | Apply_Base_Path | default    | 99 Test Street     | Reno      | NV         | 89501    | no       | Bi-weekly    |
