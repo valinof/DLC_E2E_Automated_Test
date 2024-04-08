@@ -58,3 +58,50 @@ When("I type test date of birth", () => {
 When("I type test SSN", () => {
   customerInfoEntryPageAction.enterTestSsn();
 });
+
+When("I type test cellphone number", () => {
+  customerInfoEntryPageAction.enterTestCellPhoneNumber();
+});
+
+When("I type my Address {string}", (addressValue) => {
+  customerInfoEntryPageAction.enterAddress(addressValue);
+});
+
+When("I type my City {string}", (cityValue) => {
+  customerInfoEntryPageAction.enterCity(cityValue);
+});
+
+When("I select my state from the dropdown {string}", (stateValue) => {
+  customerInfoEntryPageAction.selectState(stateValue);
+});
+
+When("I type my Zip Code {string}", (zipCodeValue) => {
+  customerInfoEntryPageAction.enterZipCode(zipCodeValue);
+});
+
+When("I check the Mailing address matches above checkbox", () => {
+  customerInfoEntryPageAction.setMailingAddressMatch();
+});
+
+When(
+  "I confirm {string}{string}{string}{string}",
+  (addressValue, cityValue, stateValue, zipValue) => {
+    customerInfoEntryPageAction.verifyMailingAddressMatch(
+      addressValue,
+      cityValue,
+      stateValue,
+      zipValue
+    );
+  }
+);
+
+When(
+  "I select the {string} radiobutton for military status",
+  (militaryStatus) => {
+    customerInfoEntryPageAction.selectMilitaryStatus(militaryStatus);
+  }
+);
+
+When("I expand the {string} section", (sectionName) => {
+  customerInfoEntryPageAction.expandIncomeEmploymentSection;
+});
