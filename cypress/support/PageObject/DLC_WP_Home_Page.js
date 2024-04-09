@@ -28,7 +28,7 @@ class HomePage {
     dlcLocationLink: () => cy.get("li:nth-of-type(9) > a"),
     blogLink: () => cy.get("li:nth-of-type(10) > a"),
     pressLink: () => cy.get("li:nth-of-type(11) > a"),
-    workAtDlcLink: () => cy.get("li:nth-of-type(12)"),
+    workAtDlcLink: () => cy.xpath("//a[normalize-space()='Work at DLC']"),
     contacUsLink: () => cy.get("li:nth-of-type(13) > a"),
     fraudAlertLink: () => cy.get("li:nth-of-type(14) > a"),
     stateLicenseLink: () => cy.get("li:nth-of-type(15) > a"),
@@ -97,6 +97,7 @@ class HomePage {
     } else if (linkName === "Press") {
       this.elements.pressLink().click();
     } else if (linkName === "Work At DLC") {
+      this.elements.workAtDlcLink().focus();
       this.elements.workAtDlcLink().click();
     } else if (linkName === "Contact Us") {
       this.elements.contacUsLink().click();
@@ -109,6 +110,10 @@ class HomePage {
         "The link name used " + linkName + " is not a valid link name."
       );
     }
+  }
+
+  logIntoMemberArea() {
+    this.elements.topMembersAreaButton().click();
   }
 }
 
