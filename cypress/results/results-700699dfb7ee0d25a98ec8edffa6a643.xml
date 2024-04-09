@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="25.872" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2024-04-09T05:21:30" tests="0" file="cypress/e2e/DLC_Make_A_Payment.feature" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Make a payment on a mobile device" timestamp="2024-04-09T05:21:30" tests="1" time="25.866" failures="0">
+    <testcase name="Make a payment on a mobile device Make a payment for less than amount due on iPhone" time="20.103" classname="Make a payment for less than amount due on iPhone">
+    </testcase>
+  </testsuite>
+</testsuites>

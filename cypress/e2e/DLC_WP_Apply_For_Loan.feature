@@ -4,7 +4,7 @@ Feature: Loan Application on WP version of frontend
 
   Scenario Outline: Apply Base Path
     Given I am testing on a Macbook 16
-    And I navigate to the "https://dlccorp.wpenginepowered.com/" url
+    And I navigate to the "https://www.dontbebroke.com/" url
     And I click the Click to Apply Now button
     When the Online Loan Application page is displayed
     And I confirm loan amount value as '<loanAmount>'

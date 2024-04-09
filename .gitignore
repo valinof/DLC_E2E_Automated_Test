@@ -1,0 +1,46 @@
+# Dependency directories
+node_modules/
+bower_components/
+
+# Compiled output
+dist/
+build/
+*.log
+
+# Environment files
+.env
+.env.local
+.env.*.local
+.env.development
+.env.test
+.env.production
+.env.local.js
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor-specific files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Package manager lock files
+yarn.lock
+package-lock.json
+.pnpm-lock.yaml
+
+# Miscellaneous
+*.bak
+*.tmp
+*.swp
+
+node_modules
